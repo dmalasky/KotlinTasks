@@ -46,20 +46,20 @@ class TaskManager() {
         // Show task names to choose from.
         displayTaskNames()
 
+        // Read user input for the index to remove
         val taskToRemove = readlnOrNull()
+        val indexToRemove = taskToRemove?.toInt()
 
-        // Create an iterator to safely remove from the list
-        val iterator = tasks.iterator()
-        while (iterator.hasNext()) {
-            val task = iterator.next()
-            if (task.taskName == taskToRemove) {
-                iterator.remove()
-                println("Task removed successfully")
-                return
-            }
+        // Check if the input is a valid integer
+        if (indexToRemove != null && indexToRemove > 0 && indexToRemove <= tasks.size) {
+            tasks.removeAt(indexToRemove - 1)
+            println("Task removed successfully")
+        }else {
+            println("Task with name '$taskToRemove' not found.")
         }
 
-        println("Task with name '$taskToRemove' not found.")
+
+
     }
 
     // Display task named for removeTask
