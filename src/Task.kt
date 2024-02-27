@@ -1,8 +1,8 @@
 import java.time.LocalTime
 
 class Task (
-    val StartTime: LocalTime,
-    val EndTime: LocalTime,
+    val startTime: LocalTime,
+    val endTime: LocalTime,
     val taskName: String,
     val taskDesc: String
 ) {

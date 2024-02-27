@@ -76,7 +76,7 @@ class TaskManager() {
         for (task in tasks) {
             println("\nTask name: " + task.taskName)
             println("Task description: " + task.taskDesc)
-            println(task.StartTime.toString() + " - " + task.EndTime)
+            println(task.startTime.toString() + " - " + task.endTime)
 
         }
     }
